@@ -1,4 +1,5 @@
-# TODO Add the SSH key of our prof
+# Add the SSH key of our prof
+echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKMf2NalRNgiv1bPjzF+4R4bak81D4SP7vvb0F7KeE7D sebastiangraf@laptop' | sudo tee -a ~/.ssh/authorized_keys > /dev/null
 
 # See this link for more information about this part of the script
 # https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm#Install_Proxmox_VE
