@@ -10,7 +10,7 @@ node01: 86.119.46.3
 
 node02: 86.119.44.187
 
-node03: 86.119.47.65
+node03: 86.119.45.22
 
 connect to the server with:
 
@@ -27,7 +27,7 @@ password: cloud1
 
 [node02](https://86.119.44.187:8006/)
 
-[node03](https://86.119.47.65:8006/)
+[node03](https://86.119.45.22:8006/)
 
 ### How to setup
 

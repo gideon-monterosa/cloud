@@ -8,9 +8,9 @@ echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKMf2NalRNgiv1bPjzF+4R4bak81D4SP7vvb0F
 : '
 10.0.1.9        node01.novalocal        node01
 
-# 10.0.1.9        node01
+# 10.0.1.9      node01
 10.0.3.184      node02
-10.0.1.114      node03
+10.0.9.64       node03
 '
 sudo vim /etc/hosts
 
