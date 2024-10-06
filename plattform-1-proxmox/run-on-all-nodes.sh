@@ -4,9 +4,14 @@ echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKMf2NalRNgiv1bPjzF+4R4bak81D4SP7vvb0F
 # See this link for more information about this part of the script
 # https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm#Install_Proxmox_VE
 
-# Edit the /etc/hosts
-#     add: <nodeip>   prox4m1.proxmox.com prox4m1
-#     remove: 127.0.0.1       localhost
+# Edit the /etc/hosts use the example bellow
+: '
+10.0.1.9        node01.novalocal        node01
+
+# 10.0.1.9        node01
+10.0.3.184      node02
+10.0.1.114      node03
+'
 sudo vim /etc/hosts
 
 # check if the setup is ok
@@ -43,7 +48,7 @@ sudo apt remove os-prober
 sudo passwd
 
 # update the /etc/network/interfaces add the bridge (make sure each host has its own ip range)
-sudo vim /etc/networks/interfaces
+sudo vim /etc/network/interfaces
 : '
 source /etc/network/interfaces.d/*
 
@@ -58,3 +63,5 @@ iface vmbr0 inet static
         post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o ens3 -j MASQUERADE
 '
 
+# Comment out -update_etc_hosts to prevent the configuration from being overwriten
+sudo vim /etc/cloud/cloud.cfg
