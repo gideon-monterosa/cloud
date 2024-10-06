@@ -3,6 +3,15 @@
 # See this link for more information about this part of the script
 # https://pve.proxmox.com/wiki/Install_Proxmox_VE_on_Debian_12_Bookworm#Install_Proxmox_VE
 
+# Edit the /etc/hosts
+#     add: <nodeip>   prox4m1.proxmox.com prox4m1
+#     remove: 127.0.0.1       localhost
+sudo vim /etc/hosts
+
+# check if the setup is ok
+# the follwoing command should return the IP address of the node
+hostname --ip-address
+
 # Add the Proxmox Repository
 echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-subscription" | sudo tee /etc/apt/sources.list.d/pve-install-repo.list
 
@@ -28,3 +37,23 @@ sudo update-grub
 
 # Recommended: Remove the os-prober Package
 sudo apt remove os-prober
+
+# Set the password to cloud1
+sudo passwd
+
+# update the /etc/network/interfaces add the bridge (make sure each host has its own ip range)
+sudo vim /etc/networks/interfaces
+: '
+source /etc/network/interfaces.d/*
+
+iface vmbr0 inet static
+        address  10.10.10.1/24
+        bridge-ports none
+        bridge-stp off
+        bridge-fd 0
+
+        post-up   echo 1 > /proc/sys/net/ipv4/ip_forward
+        post-up   iptables -t nat -A POSTROUTING -s '10.10.10.0/24' -o ens3 -j MASQUERADE
+        post-down iptables -t nat -D POSTROUTING -s '10.10.10.0/24' -o ens3 -j MASQUERADE
+'
+
