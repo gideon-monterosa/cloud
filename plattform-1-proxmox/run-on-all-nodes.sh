@@ -16,7 +16,7 @@ sudo vim /etc/hosts
 
 # check if the setup is ok
 # the follwoing command should return the IP address of the node
-hostname --ip-address
+Hostname --ip-address
 
 # Add the Proxmox Repository
 echo "deb [arch=amd64] http://download.proxmox.com/debian/pve bookworm pve-no-subscription" | sudo tee /etc/apt/sources.list.d/pve-install-repo.list
@@ -52,6 +52,7 @@ sudo vim /etc/network/interfaces
 : '
 source /etc/network/interfaces.d/*
 
+auto vmbr0
 iface vmbr0 inet static
         address  10.10.10.1/24
         bridge-ports none
