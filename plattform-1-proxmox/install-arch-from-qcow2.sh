@@ -31,6 +31,7 @@ sudo qm set 101 --ide2 local:cloudinit
 sudo qm set 101 --ciuser user --cipassword pass --ipconfig0 ip=dhcp
 
 sudo qm set 101 --boot order=scsi0
+
 # start the VM
 sudo qm start 101
 
