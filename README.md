@@ -39,6 +39,9 @@ for all three nodes.
 3. Complete the steps in `./plattform-1-proxmox/run-on-node01.sh` on node01.
 4. Complete the steps in `./plattform-1-proxmox/run-on-other-nodes.sh` on
 node02 and node03.
+5. Use './plattform-1-proxmox/install-debian-from-iso.sh' and 
+'./plattform-1-proxmox/install-arch-from-qcow2.sh' to install the VMs
+6. Follow the instructions in './plattform-1-proxmox/migrate-to-other-nodes.sh' to clone, migrate the VMs and enable high availability.
 
 ## Usefull Commands
 
