@@ -1,5 +1,5 @@
 # Download the iso
-# maybe you have to create the directory first with suod mkdir
+# maybe you have to create the directory first with sudo mkdir
 cd /var/lib/vz/template/qcow2
 sudo wget https://geo.mirror.pkgbuild.com/images/v20240915.263127/Arch-Linux-x86_64-cloudimg.qcow2
 
