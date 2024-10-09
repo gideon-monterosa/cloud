@@ -1,6 +1,5 @@
 # Cloud Computing
 
-
 Repository für das Cloud Computing Modul an der FHNW.
 
 ## Plattform 1: Proxmox
@@ -43,5 +42,5 @@ node02 and node03.
 
 ## Usefull Commands
 
-`pvecm status`: Check disk configuration of the Node
-`qm config <vm-id>`: Check current configuration of an VM
+- `pvecm status`: Check disk configuration of the Node
+- `qm config <vm-id>`: Check current configuration of an VM
