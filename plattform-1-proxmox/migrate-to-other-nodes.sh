@@ -20,7 +20,7 @@ sudo qm start 300
 sudo qm start 301
 
 # migrate the VMs to its respective nodes
-sudo qm migrate 200 node02 --online
-sudo qm migrate 201 node02 --online
-sudo qm migrate 300 node03 --online
-sudo qm migrate 301 node03 --online
+sudo qm migrate 200 node02 --online --with-local-disks
+sudo qm migrate 201 node02 --online --with-local-disks
+sudo qm migrate 300 node03 --online --with-local-disks
+sudo qm migrate 301 node03 --online --with-local-disks
