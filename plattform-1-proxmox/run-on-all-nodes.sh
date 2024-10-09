@@ -10,6 +10,7 @@ sudo visudo
 : '
 eval ALL=(ALL) NOPASSWD: ALL
 '
+
 #create and Add ssh key to evalUser authorized_keys file
 mkdir -p ~/.ssh
 

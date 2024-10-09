@@ -24,3 +24,14 @@ sudo qm migrate 200 node02 --online --with-local-disks
 sudo qm migrate 201 node02 --online --with-local-disks
 sudo qm migrate 300 node03 --online --with-local-disks
 sudo qm migrate 301 node03 --online --with-local-disks
+
+# enable High Availability
+sudo ha-manager add vm:100
+sudo ha-manager add vm:101
+sudo ha-manager add vm:200
+sudo ha-manager add vm:201
+sudo ha-manager add vm:300
+sudo ha-manager add vm:301
+
+# check ha status
+sudo ha-manager status
