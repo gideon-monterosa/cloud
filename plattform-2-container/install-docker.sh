@@ -11,3 +11,11 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
+
+// install docker packages
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+// install and start the monitoring stack
+sudo apt install git
+git clone https://gitlab.fhnw.ch/cloud/cloud/monitoringstack.git
+cd monitorstack
