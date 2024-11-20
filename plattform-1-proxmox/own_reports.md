@@ -63,6 +63,8 @@ and how they can be set up.
 took several attempts before I was able to create a working configuration.
 * I learned how you can set up the enviroment in a way that makes live migrations
 possible and that its important if you are using local or shared storage.
+* Thank you shane for showing me the `!!` command to rerund the last shell command
+(for example if you forgot to add prepend)
 
 ### Shane
 * It's been quite some time since i've had anything to do with a linux Distribution so I really had a nice refresher and was able to re-familiarize myself working mainly with the terminal again, also learning new useful commands like sudo !!

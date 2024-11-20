@@ -20,8 +20,7 @@ ssh debian@<ip>
 
 ### Proxmox Webinterfaces
 
-username: root
-password: cloud1
+username: root password: cloud1
 
 [node01](https://86.119.46.3:8006/)
 
@@ -31,19 +30,26 @@ password: cloud1
 
 ### How to setup
 
-1. Settup the switch engine machines.
-    **Dont forget to Open the Port 8006 for the Proxmox Webinterface to work**
-    this means adding the Proxmox security group to the switch engine.
-2. Complete the steps in `./plattform-1-proxmox/run-on-all-nodes.sh`
-for all three nodes.
+1. Settup the switch engine machines. **Dont forget to Open the Port 8006 for
+   the Proxmox Webinterface to work** this means adding the Proxmox security
+   group to the switch engine.
+2. Complete the steps in `./plattform-1-proxmox/run-on-all-nodes.sh` for all
+   three nodes.
 3. Complete the steps in `./plattform-1-proxmox/run-on-node01.sh` on node01.
-4. Complete the steps in `./plattform-1-proxmox/run-on-other-nodes.sh` on
-node02 and node03.
-5. Use './plattform-1-proxmox/install-debian-from-iso.sh' and 
-'./plattform-1-proxmox/install-arch-from-qcow2.sh' to install the VMs
-6. Follow the instructions in './plattform-1-proxmox/migrate-to-other-nodes.sh' to clone, migrate the VMs and enable high availability.
+4. Complete the steps in `./plattform-1-proxmox/run-on-other-nodes.sh` on node02
+   and node03.
+5. Use './plattform-1-proxmox/install-debian-from-iso.sh' and
+   './plattform-1-proxmox/install-arch-from-qcow2.sh' to install the VMs
+6. Follow the instructions in './plattform-1-proxmox/migrate-to-other-nodes.sh'
+   to clone, migrate the VMs and enable high availability.
 
-## Usefull Commands
+### Usefull Commands
 
 - `pvecm status`: Check disk configuration of the Node
 - `qm config <vm-id>`: Check current configuration of an VM
+
+## Plattform 2: Container
+
+### IPS
+
+container-lxc-host: 86.119.31.37
