@@ -1,6 +1,6 @@
 // TODO: Add eval user
 
-// Shanes SSH Key hinzufügen
+// Add Shanes ssh key
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDtMSm3Vi0ReI7Bv6vJCv6d4XjCobQ2MebIWk1rmKrP1aZInVoU+Z5NUVKn/Ze4Gqs0wjvbVBTVBaGBG+1z/DJRDmyqHqJ29lSvGfQqsXenTs5LqnXYHaNFUbqrxcWBGmYOcRjbWx+1tIFOs/LRFfM+74HJcCcVde6L6T3DLB6HsWrtnTDDXDoTJbxNVzjDcmft6bxvm3mS3L8ZHpmcgKVQLdlQLTfCXsXJzZyRQ37Bc1hc1c/t7KEphGgzpAr0BM+t/Rffcqq57gyrIfLseb1PIPTwJ1qjePcAhchvVV4YsbtFJJb9JMX6rqi+t9NnlXuCwXF8ulZaTaJ7UkijQqjw78m7jLz2eQaMQTiZJ/0rJGb/usmUpWsfoESyFuSWfMf0DzWuomare6oAYVaFJbT4zdW/u664nrN51M1fahc8zWCzmMxee4cvjNA8ehjDYB5TrbV55IW01LLo/HFDnRzxOiB4l8m9XLtkqn3GxEp/hyTT+9Cw2WXFpvQufHWXEz8= root@PimpJuice" >> ~/.ssh/authorized_keys
 
 // Install LXC and dependencies
@@ -33,6 +33,23 @@ sudo virsh net-start default
 sudo virsh net-autostart default
 sudo virsh net-info default
 
+// create a container running rockylinux
+sudo lxc-create -n cloud-test -t download -- --dist rockylinux --release 9 --arch amd64
+
+// start the container and verify its running
+sudo lxc-start -n cloud-test
+sudo lxc-ls --fancy
+
+// attach to the container, install stress-ng and run some tests
+sudo lxc-attach -n cloud-test
+dnf install -y epel-release stress-ng
+
+stress-ng --cpu 4 --timeout 1s
+ping 8.8.8.8
+// exit the container with CTRL-D
+
+// check if the container has a correct ip
+sudo lxc-ls --fancy
 
 // install stress-ng for testing
 sudo apt install stress-ng
