@@ -61,8 +61,8 @@ Monitoring Links:
 - [86.119.31.37:9100](Node-Exporter)
 - [86.119.31.37:9113](Nginx-Exporter)
 
-Docker Swarm:
+docker-mgr-01: 86.119.29.159
 
-- docker-mgr-01: 86.119.29.159
-- docker-wrk-01: 86.119.29.198
-- docker-wrk-02: 86.119.29.228
+docker-wrk-01: 86.119.29.198
+
+docker-wrk-02: 86.119.29.228
