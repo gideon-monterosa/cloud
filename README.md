@@ -53,3 +53,16 @@ username: root password: cloud1
 ### IPS
 
 container-lxc-host: 86.119.31.37
+
+Monitoring Links:
+
+- [86.119.31.37:8080](cAdvisor)
+- [86.119.31.37:9090](Prometheus)
+- [86.119.31.37:9100](Node-Exporter)
+- [86.119.31.37:9113](Nginx-Exporter)
+
+Docker Swarm:
+
+- docker-mgr-01: 86.119.29.159
+- docker-wrk-01: 86.119.29.198
+- docker-wrk-02: 86.119.29.228
