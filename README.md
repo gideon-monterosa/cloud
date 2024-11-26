@@ -60,9 +60,15 @@ Monitoring Links:
 - [86.119.31.37:9090](Prometheus)
 - [86.119.31.37:9100](Node-Exporter)
 - [86.119.31.37:9113](Nginx-Exporter)
+- [86.119.31.37:3000](Grafana)
 
 docker-mgr-01: 86.119.29.159
 
 docker-wrk-01: 86.119.29.198
 
 docker-wrk-02: 86.119.29.228
+
+Monitoring Links:
+
+- [86.119.29.159:3000](Grafana)
+- [86.119.29.159:9090](Prometheus)
