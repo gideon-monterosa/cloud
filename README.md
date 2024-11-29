@@ -62,11 +62,11 @@ Monitoring Links:
 - [86.119.31.37:9113](Nginx-Exporter)
 - [86.119.31.37:3000](Grafana)
 
-docker-mgr-01: 86.119.29.159
+docker-mgr-01: 86.119.30.172
 
-docker-wrk-01: 86.119.29.198
+docker-wrk-01: 86.119.30.110
 
-docker-wrk-02: 86.119.29.228
+docker-wrk-02: 86.119.30.210
 
 Monitoring Links:
 
