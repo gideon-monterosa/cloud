@@ -21,9 +21,9 @@ in your group.
 
 ### Adding the nodes to the docker swarm
 
-- Step: [Example] Using wrong join Key to add nodes as Manager/Worker
-- What: [Example] Both the worker nodes were added as Managers
-- Solved via: [Example] At first we didn't know the cause. we thought it had
+- Step: Using wrong join Key to add nodes as Manager/Worker
+- What: Both the worker nodes were added as Managers
+- Solved via: At first we didn't know the cause. we thought it had
   something to do with a default setting. After some research we noticed that
   there are separate invitation-codes for workers and managers alike. We also
   came across the convenient function of demoting a node to worker. We tried
@@ -100,7 +100,7 @@ VMs
 
 ### Shane
 
-- Web Services (Containers): Containers are perfect for lightweight, scalable
+- Web Services (Containers): Containers are perfect for lightweight and scalable
   applications like web services. They start quickly and use fewer resources,
   making them ideal for fast deployments and scaling.
 - Legacy Applications (VMs): VMs provide strong isolation and can run different
