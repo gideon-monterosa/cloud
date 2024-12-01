@@ -1,3 +1,4 @@
+
 # Add the SSH key of our prof
 echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKMf2NalRNgiv1bPjzF+4R4bak81D4SP7vvb0F7KeE7D sebastiangraf@laptop' | sudo tee -a ~/.ssh/authorized_keys > /dev/null
 
@@ -75,3 +76,6 @@ sudo lxc-ls --fancy
 
 # install stress-ng for testing
 sudo apt install stress-ng
+
+# On all machines
+sudo usermod -aG docker eval
