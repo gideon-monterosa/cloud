@@ -72,3 +72,11 @@ Monitoring Links:
 
 - [86.119.29.159:3000](Grafana)
 - [86.119.29.159:9090](Prometheus)
+
+## Plattform 3: Kubernetes
+
+### IPS
+
+k3snode01: 86.119.44.24
+
+k3snode02: 86.119.47.66
