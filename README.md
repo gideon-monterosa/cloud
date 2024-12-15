@@ -81,5 +81,5 @@ Monitoring Links:
 #### Part 2
 
 - k8smain01: 86.119.45.105
-- k8smain02:
-- k8sworker01:
+- k8smain02: 86.119.48.31
+- k8sworker01: 86.119.49.102

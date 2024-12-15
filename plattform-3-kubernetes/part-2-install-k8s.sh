@@ -1,30 +1,30 @@
 # --------------------
-# Auf allen Maschienen
+# auf allen maschienen
 # --------------------
 
-# Eval user hinzufügen
+# eval user hinzufügen
 
-# Add shanes ssh key
-echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDtMSm3Vi0ReI7Bv6vJCv6d4XjCobQ2MebIWk1rmKrP1aZInVoU+Z5NUVKn/Ze4Gqs0wjvbVBTVBaGBG+1z/DJRDmyqHqJ29lSvGfQqsXenTs5LqnXYHaNFUbqrxcWBGmYOcRjbWx+1tIFOs/LRFfM+74HJcCcVde6L6T3DLB6HsWrtnTDDXDoTJbxNVzjDcmft6bxvm3mS3L8ZHpmcgKVQLdlQLTfCXsXJzZyRQ37Bc1hc1c/t7KEphGgzpAr0BM+t/Rffcqq57gyrIfLseb1PIPTwJ1qjePcAhchvVV4YsbtFJJb9JMX6rqi+t9NnlXuCwXF8ulZaTaJ7UkijQqjw78m7jLz2eQaMQTiZJ/0rJGb/usmUpWsfoESyFuSWfMf0DzWuomare6oAYVaFJbT4zdW/u664nrN51M1fahc8zWCzmMxee4cvjNA8ehjDYB5TrbV55IW01LLo/HFDnRzxOiB4l8m9XLtkqn3GxEp/hyTT+9Cw2WXFpvQufHWXEz8= root@PimpJuice" >> ~/.ssh/authorized_keys
+# add shanes ssh key
+echo "ssh-rsa aaaab3nzac1yc2eaaaadaqabaaabgqdtmsm3vi0rei7bv6vjcv6d4xjcobq2mebiwk1rmkrp1azinvou+z5nuvkn/ze4gqs0wjvbvbtvbagbg+1z/djrdmyqhqj29lsvgfqqsxents5lqnxyhanfubqrxcwbgmyocrjbwx+1tifos/lrffm+74hjcccvde6l6t3dlb6hswrtntddxdotjbxnvzjdcmft6bxvm3ms3l8zhpmcgkvqldlqltfcxsxjzzyrq37bc1hc1c/t7kephggzpar0bm+t/rffcqq57gyriflseb1piptwj1qjepcahchvvv4ysbtfjjb9jmx6rqi+t9nnlxucwxf8ulzataj7ukijqqjw78m7jlz2eqamqtizj/0rjgb/usmupwsfoesyfuswfmf0dzwuomare6oayvafjbt4zdw/u664nrn51m1fahc8zwczmmxee4cvjna8ehjdyb5trbv55iw01llo/hfdnrzxoib4l8m9xltkqn3gxep/hytt+9cw2wxfpvqufhwxez8= root@pimpjuice" >> ~/.ssh/authorized_keys
 
-# Update the machienes and install
+# update the machienes and install
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y containerd vim
 
-# Erstelle die Konfigurationsdatei für Containerd
+# erstelle die konfigurationsdatei für containerd
 sudo mkdir -p /etc/containerd
 sudo containerd config default | sudo tee /etc/containerd/config.toml
 
-# Bearbeite die Konfiguration
+# bearbeite die konfiguration
 sudo vi /etc/containerd/config.toml
 # [plugins."io.containerd.grpc.v1.cri".containerd.runtimes.runc.options]
-#   SystemdCgroup = true
+#   systemdcgroup = true
 
-# Restart
+# restart
 sudo systemctl restart containerd
 sudo systemctl enable containerd
 
-# Kubernetes Repository auf allen Maschinen einrichten
+# kubernetes repository auf allen maschinen einrichten
 sudo apt-get update
 sudo apt-get install -y apt-transport-https ca-certificates curl gnupg
 
