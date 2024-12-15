@@ -6,11 +6,9 @@ Repository für das Cloud Computing Modul an der FHNW.
 
 ### IPS
 
-node01: 86.119.46.3
-
-node02: 86.119.44.187
-
-node03: 86.119.45.22
+- node01: 86.119.46.3
+- node02: 86.119.44.187
+- node03: 86.119.45.22
 
 connect to the server with:
 
@@ -62,11 +60,9 @@ Monitoring Links:
 - [86.119.31.37:9113](Nginx-Exporter)
 - [86.119.31.37:3000](Grafana)
 
-docker-mgr-01: 86.119.30.172
-
-docker-wrk-01: 86.119.30.110
-
-docker-wrk-02: 86.119.30.210
+- docker-mgr-01: 86.119.30.172
+- docker-wrk-01: 86.119.30.110
+- docker-wrk-02: 86.119.30.210
 
 Monitoring Links:
 
@@ -77,6 +73,13 @@ Monitoring Links:
 
 ### IPS
 
-k3snode01: 86.119.44.24
+#### Part 1
 
-k3snode02: 86.119.47.66
+- k3snode01: 86.119.44.24
+- k3snode02: 86.119.47.66
+
+#### Part 2
+
+- k8smain01: 86.119.45.105
+- k8smain02:
+- k8sworker01:
