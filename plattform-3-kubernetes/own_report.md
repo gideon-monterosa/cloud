@@ -191,12 +191,19 @@ yourself.
 
 ### Gideon
 
-- Container-Runtime: Die Installation von containerd als Container-Runtime
-  anstelle von Docker konnte ich Verständnis für eine andere Runtime als Docker
-  aufbauen.
-- Kubeadm: Ich habe gelernt wie ich durch Verwendung von Kubeadm auf eine
-  schnelle und effiziente Art und weise ein Kubernetes-Cluster aufsetzen kann.
-- CNI: Ich habe zuvor noch nie ein Container Network Interface aufgesetzt und
-  zuvor auch noch nie Gedanken daran verloren wie diese funktionieren. Für diese
-  Aufgabe haben wir Calico verwendet und dies verdeutlichte mir die die
-  Bedeutung von Netwerklösungen für Pod-Kommunikation.
+- Container runtime: The installation of containerd as container runtime
+  instead of Docker, I was able to build understanding for a runtime other than Docker
+  build up.
+- Kubeadm: I learned how to set up a Kubernetes container runtime by using Kubeadm in a
+  fast and efficient way to set up a Kubernetes cluster.
+- CNI: I have never set up a container network interface before and
+  never thought about how they work before. For this
+  task we used Calico and this made me realize the importance of network solutions for pod communication.
+
+
+### Shane
+
+- I realized the complexity of managing control plane and worker nodes: I found it challenging to configure the master (control plane) and worker nodes correctly, ensuring the proper ports and services were exposed.
+- I learned that setting up Containerd to work with Kubernetes is an important part of creating a Kubernetes cluster. I found out that Containerd is the software that manages and runs containers, and it plays a key role in how Kubernetes works.
+- I learned that Calico is a tool used to manage networking in Kubernetes clusters. It helps with communication between the different parts of the cluster, like the pods and nodes. I discovered that Calico creates a network where each pod can get its own unique IP address, allowing them to talk to each other. 
+
