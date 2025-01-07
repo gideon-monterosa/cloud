@@ -83,3 +83,12 @@ Monitoring Links:
 - k8smain01: 86.119.45.105
 - k8smain02: 86.119.48.31
 - k8sworker01: 86.119.49.102
+
+## Plattform 4: Storage
+
+### IPS
+
+- monitor01: 86.119.30.195
+- osd01: 86.119.31.189
+- osd02: 86.119.29.59
+- osd03: 86.119.31.50
