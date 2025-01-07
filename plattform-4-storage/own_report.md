@@ -54,9 +54,7 @@ cat /etc/ceph/ceph.pub
 
 # add the ceph public key
 
-sudo su echo "ssh-rsa
-AAAAB3NzaC1yc2EAAAADAQABAAABgQC+vmEdJ50pIIEZ1UjcVB8Idi2d8VSmKaVCdDlsuDncQIJojlblB58WNvPXzjD5VZwzYXJcTt9yjr9RrKC+QfvcyM6WKZQ8LhtMLI0KhWbOE7aa0jav9hXB+UOCCHIYq4t1kcNvUjdOo/VxRqrg7PLlgaXhT8NFp/oZH6BNUcqGc36YlyrUIm7DZLlLSZYNAtUHY4dLpn4jpkUFgVMXPpCMTyYH416wXJDjWK7OvzO01udqdk5pKago4p75UhNqQ8zMhyZAsFRyp485CvBgDVVNmYdJOhD2RayaZLrZJcVn51oVeMGwLDz1dtX4qF+4fQulsQzaWUiJfs9ZQ1TL4xEnc9xVfyO/iJXqIdpV0kpq9XdhvvAbYEN+FB/+u3cLQ4nvjL2GbImvbSIk5KDe43Aqc3KXx2u9ufqdqQk+89zJBh5XbXy5U6q2UBFYaffEsWrTQkJAL9E0VoYgf7VXdoOh0QFFa0VXvTiTCFNWb+1QOKUhHf4yVnBt+gC9Y0CrdtM=
-ceph-72bc6258-cd20-11ef-8488-fa163eb2f581" > /root/.ssh/authorized_keys
+sudo su echo <<pubkey>> /root/.ssh/authorized_keys
 
 # exit super user
 
