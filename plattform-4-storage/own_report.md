@@ -140,3 +140,9 @@ yourself.
 
 - Configuring block storage: Setting up block storage (RBD) by initializing RBD
   pools, managing the Ceph authentication and then generationg RBD images.
+
+
+### Shane
+
+- I learned how to set up a Ceph cluster with one monitor node and three OSD nodes, ensuring proper configuration to achieve a HEALTH_OK status. I did this using cephadm for deployment and ceph orch to verify node connections and device states.
+- I created storage pools for RBD (block storage) and CephFS (file storage), ensuring placement groups were distributed across OSDs. Setting up clients with specific access rights required precision. i Was able to check my work with "ceph auth get client.01-cloudfhnw-rbd" which helped me in confirming that it worked.
